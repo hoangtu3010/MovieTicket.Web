@@ -1,9 +1,9 @@
 <template>
-  <Test />
+  <Home />
 </template>
 
 <script>
-import Test from '../components/Test.vue'
+import Home from './Home.vue'
 export default {
-  components: { Test },}
+  components: { Home },}
 </script>
