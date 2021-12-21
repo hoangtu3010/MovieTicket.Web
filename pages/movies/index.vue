@@ -3,12 +3,13 @@
     <banner :bgr="bgr">
       <div slot="bannerContent">
         <h1 class="title bold">
-          get <span class="color-theme">movie</span> tickets
+          <span>get</span> 
+          <span class="text-note">movie</span>
+          <span>tickets</span>
         </h1>
-        <p>
-          Buy movie tickets in advance, find movie times watch trailers, read
-          movie reviews and much more
-        </p>
+        <div class="typing-text">
+          Buy movie tickets in advance, find movie times watch trailers, and...
+        </div>
       </div>
     </banner>
     <search-ticket :bgrSearchTab="bgrSearchTab" />

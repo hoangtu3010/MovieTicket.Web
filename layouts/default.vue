@@ -40,6 +40,67 @@
           </div>
         </div>
       </div>
+      <div class="container">
+        <div class="footer-top">
+          <div class="logo">
+            <a href="#">
+              <img
+                src="http://pixner.net/boleto/demo/assets/images/logo/logo.png"
+                alt="footer"
+              />
+            </a>
+          </div>
+          <ul class="social-icons">
+            <li>
+              <a href="#">
+                <b-icon icon="facebook"></b-icon>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="">
+                <b-icon icon="twitter"></b-icon>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <b-icon icon="google"></b-icon>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <b-icon icon="instagram"></b-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-bottom-area">
+            <div class="left">
+              <span>
+                Copyright © 2020.All Rights Reserved By
+                <a href="#" style="color: #31d7a9">Boleto </a>
+              </span>
+            </div>
+            <ul class="links">
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Terms Of Use</a>
+              </li>
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#">FAQ</a>
+              </li>
+              <li>
+                <a href="#">Feedback</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </footer>
   </div>
 </template>
@@ -80,7 +141,7 @@ export default {
   margin: 0;
 }
 
-body{
+body {
   background: #001232;
   color: #dbe2fb;
   overflow-x: hidden;
@@ -215,5 +276,165 @@ body{
 .newslater-wrapper .cate {
   color: #31d7a9;
   margin-bottom: 23px;
+}
+
+.newslater-form {
+  margin-bottom: 30px;
+}
+
+.newslater-form input {
+  height: 50px;
+  padding-right: 160px;
+  color: #99abe2;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 25px;
+  padding-left: 20px;
+  box-shadow: 0px 3px 10px 0px rgb(0 0 0 / 10%);
+  background: transparent;
+}
+
+.newslater-form input:focus {
+  outline: none;
+}
+
+.newslater-form button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-image: -webkit-linear-gradient(
+    169deg,
+    #5560ff 17%,
+    #aa52a1 63%,
+    #ff4343 100%
+  );
+  box-shadow: 0px 10px 15px 0px rgb(59 55 188 / 50%);
+  width: auto;
+  color: #dbe2fb;
+  height: 50px;
+  padding: 0 40px;
+  border-radius: 25px;
+  border: none;
+}
+
+.footer-top {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 10px;
+}
+
+.footer-top > * {
+  padding-bottom: 20px;
+  margin-bottom: 0;
+}
+
+.social-icons {
+  margin: -7.5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.social-icons li {
+  list-style: none;
+  padding: 7.5px;
+}
+
+.social-icons li a {
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 14px;
+  display: inline-block;
+  transition: all ease 0.3s;
+}
+.social-icons li a:hover {
+  background: #31d7a9;
+  border-color: #31d7a9;
+}
+
+.footer-top,
+.footer-bottom-area {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+.footer-bottom {
+  padding: 25px 0;
+}
+
+.footer-bottom .links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.footer-bottom-area {
+  flex-wrap: wrap-reverse;
+}
+
+.footer-bottom .links li {
+  list-style: none;
+  padding: 0 15px;
+}
+
+.footer-bottom .links li a {
+  color: #dbe2fb;
+  transition: 0.2s;
+}
+
+.footer-bottom .links li a:hover {
+  text-decoration: none;
+  color: #31d7a9;
+}
+
+.title {
+  cursor: pointer;
+}
+
+.title span {
+  transition: 0.5s linear;
+}
+
+.title:hover span.text-note {
+  margin: 0 20px;
+}
+
+.title:hover span {
+  color: #fff;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+}
+
+.text-note{
+  color: #31d7a9;
+}
+
+.typing-text {
+  width: 70ch;
+  animation: typing 5s steps(70), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 1.8em;
+  color: #fff;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  80% {
+    border-color: transparent;
+  }
 }
 </style>

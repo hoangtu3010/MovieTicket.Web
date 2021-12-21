@@ -3,23 +3,19 @@
     <banner :bgr="bgr">
       <div slot="bannerContent">
         <h1 class="title cd-headline clip">
-          <span class="d-block">book your</span> tickets for
-          <span
-            class="color-theme cd-words-wrapper p-0 m-0"
-            style="width: 271.888px"
-          >
-            <b class="is-hidden">Movie</b>
-          </span>
+          <span class="d-block">book your</span>
+          <span>tickets for</span> 
+          <span class="text-note"> Movie </span>
         </h1>
-        <p>
+        <div class="typing-text">
           Safe, secure, reliable ticketing.Your ticket to live entertainment!
-        </p>
+        </div>
       </div>
     </banner>
     <search-ticket :bgrSearchTab="bgrSearchTab" />
 
     <section class="movie-section">
-      <div class="container">Movie</div>
+      <div class="container"></div>
     </section>
   </div>
 </template>
@@ -32,12 +28,12 @@ export default {
   data() {
     return {
       bgr: "banner01.jpg",
-      bgrSearchTab: "ticket-bg01.jpg"
+      bgrSearchTab: "ticket-bg01.jpg",
     };
   },
 };
 </script>
 <style>
- 
+
 </style>
 

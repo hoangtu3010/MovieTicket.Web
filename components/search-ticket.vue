@@ -12,34 +12,65 @@
               <h3 class="title">what are you looking for</h3>
             </div>
           </div>
-          <div class="col-lg-6 mb-20">
-            <button>Movie</button>
-          </div>
         </div>
         <div class="tab-area">
           <div class="tab-item">
             <form class="ticket-search-form">
               <div class="form-group large">
-                <input type="text" placeholder="Search fo Movies" />
-                <button type="submit"><i class="fas fa-search"></i></button>
+                <input
+                  type="text"
+                  placeholder="Search fo Movies"
+                  v-model="searchInfo.keyword"
+                />
+                <button type="submit"><b-icon icon="search"></b-icon></button>
               </div>
               <div class="form-group">
                 <div class="thumb">
                   <img src="../assets/imgs/city.png" alt="ticket" />
                 </div>
                 <span class="type">city</span>
+                <div class="list-option">
+                  <b-form-select
+                    class="select-option"
+                    v-model="searchInfo.cities"
+                  >
+                    <option v-for="(option, index) in cities" :key="index">
+                      {{ option.name }}
+                    </option>
+                  </b-form-select>
+                </div>
               </div>
               <div class="form-group">
                 <div class="thumb">
                   <img src="../assets/imgs/date.png" alt="ticket" />
                 </div>
                 <span class="type">date</span>
+                <div class="list-option">
+                  <b-form-select
+                    class="select-option"
+                    v-model="searchInfo.date"
+                  >
+                    <option v-for="(option, index) in date" :key="index">
+                      {{ option.date }}
+                    </option>
+                  </b-form-select>
+                </div>
               </div>
               <div class="form-group">
                 <div class="thumb">
                   <img src="../assets/imgs/cinema.png" alt="ticket" />
                 </div>
                 <span class="type">cinema</span>
+                <div class="list-option">
+                  <b-form-select
+                    class="select-option"
+                    v-model="searchInfo.cinema"
+                  >
+                    <option v-for="(option, index) in cinema" :key="index">
+                      {{ option.name }}
+                    </option>
+                  </b-form-select>
+                </div>
               </div>
             </form>
           </div>
@@ -58,8 +89,56 @@ export default {
     },
   },
   data() {
-    return {};
+    return {
+      selected: {},
+      searchInfo: {
+        keyword: "",
+        city: "",
+        date: "",
+        cinema: "",
+      },
+      cities: [
+        {
+          id: 1,
+          name: "HN",
+        },
+        {
+          id: 2,
+          name: "HCM",
+        },
+        {
+          id: 3,
+          name: "Sai Gon",
+        },
+      ],
+      date: [
+        {
+          date: "16/12/2021",
+        },
+        {
+          date: "15/12/2021",
+        },
+        {
+          date: "14/12/2021",
+        },
+      ],
+      cinema: [
+        {
+          id: 1,
+          name: "So 1",
+        },
+        {
+          id: 2,
+          name: "So 2",
+        },
+        {
+          id: 3,
+          name: "So 3",
+        },
+      ],
+    };
   },
+  mounted() {},
 };
 </script>
 
@@ -124,9 +203,70 @@ export default {
 
 .ticket-search-form {
   margin-bottom: -20px;
+  display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
+}
+
+.ticket-search-form .form-group {
+  display: flex;
+  margin-bottom: 20px;
+  position: relative;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.ticket-search-form .form-group .select-option {
+  position: relative;
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.ticket-search-form .form-group .select-option option{
+  border: none;
+  background-color: #0a1e5e;
+}
+
+.ticket-search-form .form-group .select-option:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.ticket-search-form .form-group.large {
+  width: 270px;
+}
+
+.ticket-search-form .form-group input {
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid #9eb1eb;
+  border-radius: 0;
+  color: #dbe2fb;
+  width: 100%;
+  padding: 0;
+  height: 45px;
+  padding-right: 50px;
+}
+
+.ticket-search-form .form-group input:focus {
+  outline: none;
+}
+
+.ticket-search-form .form-group button {
+  outline: none;
+  background: transparent;
+  border: none;
+  color: #90a5e8;
+  height: 45px;
+  width: 45px;
+  text-align: right;
+  line-height: 45px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .ticket-search-form .form-group .thumb {
@@ -135,7 +275,6 @@ export default {
   border-radius: 50%;
   overflow: hidden;
   margin-right: 10px;
-  -webkit-box-shadow: 5px 0 15px rgb(0 0 0 / 50%);
   box-shadow: 5px 0 15px rgb(0 0 0 / 50%);
 }
 </style>

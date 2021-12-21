@@ -25,7 +25,10 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ["@/plugins/api"],
+  plugins: [
+    "@/plugins/api",
+    "@/plugins/mixins/common",
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -40,6 +43,9 @@ export default {
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
   ],
+  bootstrapVue: {
+    icons: true
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
@@ -48,5 +54,19 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    babel: {
+      presets({isServer}) {
+        const targets = isServer ? { node: 'current' } : { ie: 11 }
+        return [
+          [ require.resolve("@babel/preset-env"), { targets }  ]
+        ]
+      },
+      plugins: [
+        "@babel/syntax-dynamic-import",
+        "@babel/transform-runtime",
+        "@babel/transform-async-to-generator"
+      ]
+    }
+  },
 };

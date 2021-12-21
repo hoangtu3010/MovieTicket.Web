@@ -22,7 +22,7 @@ export default {
   },
   data() {
     return {};
-  },
+  }
 };
 </script>
 
@@ -60,7 +60,6 @@ export default {
 .banner-content {
   margin: 0 auto;
   text-align: center;
-  max-width: 840px;
 }
 
 .banner-content .title {
