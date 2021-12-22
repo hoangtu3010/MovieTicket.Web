@@ -17,7 +17,16 @@ export default {
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
       { rel: "preconnect", href: "https://fonts.gstatic.com" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap"}
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap",
+      },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com" },
+      {
+        href: "https://fonts.googleapis.com/css2?family=Monoton&display=swap",
+        rel: "stylesheet",
+      },
     ],
   },
 
@@ -25,10 +34,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-    "@/plugins/api",
-    "@/plugins/mixins/common",
-  ],
+  plugins: ["@/plugins/api", "@/plugins/mixins/common"],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -44,7 +50,7 @@ export default {
     "@nuxtjs/axios",
   ],
   bootstrapVue: {
-    icons: true
+    icons: true,
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -56,17 +62,15 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     babel: {
-      presets({isServer}) {
-        const targets = isServer ? { node: 'current' } : { ie: 11 }
-        return [
-          [ require.resolve("@babel/preset-env"), { targets }  ]
-        ]
+      presets({ isServer }) {
+        const targets = isServer ? { node: "current" } : { ie: 11 };
+        return [[require.resolve("@babel/preset-env"), { targets }]];
       },
       plugins: [
         "@babel/syntax-dynamic-import",
         "@babel/transform-runtime",
-        "@babel/transform-async-to-generator"
-      ]
-    }
+        "@babel/transform-async-to-generator",
+      ],
+    },
   },
 };

@@ -1,16 +1,12 @@
 <template>
   <div>
+    <div id="progress">
+      <span id="progress_value"></span>
+    </div>
     <header class="header-section">
       <div class="container">
         <div class="header-wrapper">
-          <div class="logo">
-            <a href="#">
-              <img
-                src="http://pixner.net/boleto/demo/assets/images/logo/logo.png"
-                alt="cinema image"
-              />
-            </a>
-          </div>
+          <a href="#" class="logo"> Cinema <span>.cn</span> </a>
           <ul class="menu">
             <li
               class="menu-item"
@@ -20,6 +16,7 @@
               <a :href="item.url">{{ item.name }}</a>
             </li>
           </ul>
+          <button class="btn" style="flex: 20%; color: #fff; float: right">Join Us</button>
         </div>
       </div>
     </header>
@@ -42,14 +39,7 @@
       </div>
       <div class="container">
         <div class="footer-top">
-          <div class="logo">
-            <a href="#">
-              <img
-                src="http://pixner.net/boleto/demo/assets/images/logo/logo.png"
-                alt="footer"
-              />
-            </a>
-          </div>
+          <a href="#" class="logo"> Cinema <span>.cn</span> </a>
           <ul class="social-icons">
             <li>
               <a href="#">
@@ -132,6 +122,20 @@ export default {
       ],
     };
   },
+  mounted(){
+    let scrollPrecentage = () => {
+        let scrollProgress = document.getElementById("progress");
+        let progressValue = document.getElementById("progress_value")
+        let pos = document.documentElement.scrollTop;
+        let calHeigh = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        let scrollValue = Math.round(pos * 100 / calHeigh);
+        scrollProgress.style.background = `conic-gradient(#e70634 ${scrollValue}%, #2b2f38 ${scrollValue}%)`
+      }
+      window.onscroll = scrollPrecentage;
+      window.onload = scrollPrecentage;
+  },
+  methods: {
+  }
 };
 </script>
 <style>
@@ -147,7 +151,45 @@ body {
   overflow-x: hidden;
   font-size: 16px;
   font-family: "Quicksand", sans-serif;
+  scrollbar-width: none;
 }
+
+/*== HIDE DEFAULT SCROLL BAR ==*/
+body::-webkit-scrollbar{
+  display: none;
+}
+
+::selection{
+  background-color: #e70634;
+  color: #000;
+}
+/*== SCROLL PROGRESS ==*/
+#progress{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: grid;
+  place-items: center;
+  z-index: 999;
+}
+
+#progress_value{
+  display: block;
+  height: calc(100% - 5px);
+  width: calc(100% - 5px);
+  background-color: #1c1f25;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  font-size: 0;
+}
+
+/*== HEADER ==*/
 
 .header-section {
   border: 1px solid rgba(255, 255, 255, 0.102);
@@ -167,8 +209,28 @@ body {
   align-content: center;
 }
 
-.header-wrapper .logo {
-  flex: 20%;
+.logo:hover{
+  text-decoration: none;
+  color: #31d7a9;
+}
+
+.logo {
+  flex: 30%;
+  color: #e70634;
+  margin: 0 30px 0 0;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: Monoton;
+  letter-spacing: 1px;
+  transition: .3s;
+}
+
+.logo span{
+  font-size: 0.5rem;
+  margin-left: 3px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
 }
 
 .header-wrapper .menu {
@@ -201,6 +263,42 @@ body {
 .menu .menu-item-active a {
   color: #31d7a9;
 }
+
+/*== TITLE ==*/
+
+.title {
+  cursor: pointer;
+}
+
+.title span {
+  transition: 0.5s linear;
+}
+
+.title:hover span.text-note {
+  margin: 0 20px;
+}
+
+.title:hover span {
+  color: #fff;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+}
+
+.text-note {
+  color: #31d7a9;
+}
+
+.typing-text {
+  width: 70ch;
+  animation: typing 5s steps(70), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 1.8em;
+  color: #fff;
+}
+
+/*== FOOTER ==*/
 
 .footer-section {
   position: relative;
@@ -394,37 +492,6 @@ body {
   color: #31d7a9;
 }
 
-.title {
-  cursor: pointer;
-}
-
-.title span {
-  transition: 0.5s linear;
-}
-
-.title:hover span.text-note {
-  margin: 0 20px;
-}
-
-.title:hover span {
-  color: #fff;
-  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
-}
-
-.text-note{
-  color: #31d7a9;
-}
-
-.typing-text {
-  width: 70ch;
-  animation: typing 5s steps(70), blink 0.5s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
-  font-family: monospace;
-  font-size: 1.8em;
-  color: #fff;
-}
 
 @keyframes typing {
   from {
