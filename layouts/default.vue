@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div class="stars">
+      <span v-for="item in 10" :key="item.index" class="star"></span>
+    </div>
     <div id="progress">
       <span id="progress_value"></span>
     </div>
@@ -16,7 +19,9 @@
               <a :href="item.url">{{ item.name }}</a>
             </li>
           </ul>
-          <button class="btn" style="flex: 20%; color: #fff; float: right">Join Us</button>
+          <button class="btn" style="flex: 20%; color: #fff; float: right">
+            Join Us
+          </button>
         </div>
       </div>
     </header>
@@ -122,20 +127,21 @@ export default {
       ],
     };
   },
-  mounted(){
+  mounted() {
     let scrollPrecentage = () => {
-        let scrollProgress = document.getElementById("progress");
-        let progressValue = document.getElementById("progress_value")
-        let pos = document.documentElement.scrollTop;
-        let calHeigh = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        let scrollValue = Math.round(pos * 100 / calHeigh);
-        scrollProgress.style.background = `conic-gradient(#e70634 ${scrollValue}%, #2b2f38 ${scrollValue}%)`
-      }
-      window.onscroll = scrollPrecentage;
-      window.onload = scrollPrecentage;
+      let scrollProgress = document.getElementById("progress");
+      let progressValue = document.getElementById("progress_value");
+      let pos = document.documentElement.scrollTop;
+      let calHeigh =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollValue = Math.round((pos * 100) / calHeigh);
+      scrollProgress.style.background = `conic-gradient(#e70634 ${scrollValue}%, #2b2f38 ${scrollValue}%)`;
+    };
+    window.onscroll = scrollPrecentage;
+    window.onload = scrollPrecentage;
   },
-  methods: {
-  }
+  methods: {},
 };
 </script>
 <style>
@@ -155,16 +161,120 @@ body {
 }
 
 /*== HIDE DEFAULT SCROLL BAR ==*/
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
   display: none;
 }
 
-::selection{
+::selection {
   background-color: #e70634;
   color: #000;
 }
+
+/* BACKGROUND ANIMATION */
+.stars{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  animation: animateBg 5s linear infinite;
+}
+
+.stars .star{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 1);
+  animation: animate 3s linear infinite;
+}
+
+.stars .star::before{
+  content: '';
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  width: 300px;
+  height: 1px;
+  background: linear-gradient(90deg, #fff, transparent);
+}
+
+.stars .star:nth-child(1){
+  top: 0;
+  right: 0px;
+  left: initial;
+  animation-delay: 0;
+  animation-duration: 1s;
+}
+.stars .star:nth-child(2){
+  top: 0;
+  right: 80px;
+  left: initial;
+  animation-delay: 0.2s;
+  animation-duration: 3s;
+}
+.stars .star:nth-child(3){
+  top: 80px;
+  right: 0;
+  left: initial;
+  animation-delay: 0.4s;
+  animation-duration: 2s;
+}
+.stars .star:nth-child(4){
+  top: 0;
+  right: 180px;
+  left: initial;
+  animation-delay: 0.6s;
+  animation-duration: 1.5s;
+}
+.stars .star:nth-child(5){
+  top: 0;
+  right: 400px;
+  left: initial;
+  animation-delay: 0.6s;
+  animation-duration: 2.5s;
+}
+.stars .star:nth-child(6){
+  top: 0;
+  right: 600px;
+  left: initial;
+  animation-delay: 1s;
+  animation-duration: 3s;
+}
+.stars .star:nth-child(7){
+  top: 300px;
+  right: 0;
+  left: initial;
+  animation-delay: 1.2s;
+  animation-duration: 1.75s;
+}
+.stars .star:nth-child(8){
+  top: 0;
+  right: 700px;
+  left: initial;
+  animation-delay: 1.4s;
+  animation-duration: 1.25s;
+}
+.stars .star:nth-child(9){
+  top: 0;
+  right: 1000px;
+  left: initial;
+  animation-delay: 0.75s; 
+  animation-duration: 2.25s;
+}
+.stars .star:nth-child(10){
+  top: 0;
+  right: 450px;
+  left: initial;
+  animation-delay: 2.75s;
+  animation-duration: 2.25;
+}
+
 /*== SCROLL PROGRESS ==*/
-#progress{
+#progress {
   height: 50px;
   width: 50px;
   border-radius: 50%;
@@ -177,7 +287,7 @@ body::-webkit-scrollbar{
   z-index: 999;
 }
 
-#progress_value{
+#progress_value {
   display: block;
   height: calc(100% - 5px);
   width: calc(100% - 5px);
@@ -209,7 +319,7 @@ body::-webkit-scrollbar{
   align-content: center;
 }
 
-.logo:hover{
+.logo:hover {
   text-decoration: none;
   color: #31d7a9;
 }
@@ -222,15 +332,14 @@ body::-webkit-scrollbar{
   font-weight: 400;
   font-family: Monoton;
   letter-spacing: 1px;
-  transition: .3s;
+  transition: 0.3s;
 }
 
-.logo span{
+.logo span {
   font-size: 0.5rem;
   margin-left: 3px;
   font-weight: 700;
   letter-spacing: 2px;
-
 }
 
 .header-wrapper .menu {
@@ -492,6 +601,29 @@ body::-webkit-scrollbar{
   color: #31d7a9;
 }
 
+@keyframes animateBg{
+  0%,100%
+  {
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.2)
+  }
+}
+
+@keyframes animate{
+  0%{
+    transform: rotate(315deg) translateX(0);
+    opacity: 1;
+  }
+  70%{
+    opacity: 1;
+  }
+  100%{
+    transform: rotate(315deg) translateX(-1000px);
+    opacity: 0;
+  }
+}
 
 @keyframes typing {
   from {

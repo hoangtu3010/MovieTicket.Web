@@ -60,9 +60,7 @@
                 >
               </div>
               <div class="rating">
-                <b-icon icon="star"></b-icon><b-icon icon="star"></b-icon
-                ><b-icon icon="star"></b-icon><b-icon icon="star"></b-icon
-                ><b-icon icon="star"></b-icon>
+                4.5 <b-icon icon="star"></b-icon>
               </div>
             </div>
           </div>
@@ -129,9 +127,7 @@
                 >
               </div>
               <div class="rating">
-                <b-icon icon="star"></b-icon><b-icon icon="star"></b-icon
-                ><b-icon icon="star"></b-icon><b-icon icon="star"></b-icon
-                ><b-icon icon="star"></b-icon>
+                4.5 <b-icon icon="star"></b-icon>
               </div>
             </div>
           </div>
@@ -198,9 +194,7 @@
                 >
               </div>
               <div class="rating">
-                <b-icon icon="star"></b-icon><b-icon icon="star"></b-icon
-                ><b-icon icon="star"></b-icon><b-icon icon="star"></b-icon
-                ><b-icon icon="star"></b-icon>
+                4.5 <b-icon icon="star"></b-icon>
               </div>
             </div>
           </div>
@@ -267,9 +261,7 @@
                 >
               </div>
               <div class="rating">
-                <b-icon icon="star"></b-icon><b-icon icon="star"></b-icon
-                ><b-icon icon="star"></b-icon><b-icon icon="star"></b-icon
-                ><b-icon icon="star"></b-icon>
+                4.5 <b-icon icon="star"></b-icon>
               </div>
             </div>
           </div>
@@ -336,9 +328,7 @@
                 >
               </div>
               <div class="rating">
-                <b-icon icon="star"></b-icon><b-icon icon="star"></b-icon
-                ><b-icon icon="star"></b-icon><b-icon icon="star"></b-icon
-                ><b-icon icon="star"></b-icon>
+                4.5 <b-icon icon="star"></b-icon>
               </div>
             </div>
           </div>
@@ -405,78 +395,7 @@
                 >
               </div>
               <div class="rating">
-                <b-icon icon="star"></b-icon><b-icon icon="star"></b-icon
-                ><b-icon icon="star"></b-icon><b-icon icon="star"></b-icon
-                ><b-icon icon="star"></b-icon>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </swiper-slide>
-    <swiper-slide>
-      <div class="main-slider-box">
-        <a href="" class="main-slider-overlay">
-          <!-- <b-icon icon="play-fill" scale="3"></b-icon> -->
-          <svg
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-            x="0px"
-            y="0px"
-            width="80px"
-            height="80px"
-            viewBox="0 0 213.7 213.7"
-            enable-background="new 0 0 213.7 213.7"
-            xml:space="preserve"
-          >
-            <polygon
-              class="triangle"
-              id="XMLID_18_"
-              fill="none"
-              stroke-width="7"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-miterlimit="10"
-              points="
-	73.5,62.5 148.5,105.8 73.5,149.1 "
-            />
-
-            <circle
-              class="circle"
-              id="XMLID_17_"
-              fill="none"
-              stroke-width="7"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-miterlimit="10"
-              cx="106.8"
-              cy="106.8"
-              r="103.3"
-            />
-          </svg>
-        </a>
-        <div class="main-slider-img">
-          <img src="../assets/imgs/venus.jpg" alt="img" />
-        </div>
-        <div class="main-slider-text">
-          <span class="quality">Full HD</span>
-          <div class="bottom-text">
-            <div class="movie-name">
-              <span>2014</span>
-              <strong>Paranormal ACtivity: The Marked Ones</strong>
-            </div>
-            <div class="category-rating">
-              <div class="category">
-                <a href="#">Horror</a>,<a href="#">Mistery</a>,<a href="#"
-                  >Thriller</a
-                >
-              </div>
-              <div class="rating">
-                <b-icon icon="star"></b-icon><b-icon icon="star"></b-icon
-                ><b-icon icon="star"></b-icon><b-icon icon="star"></b-icon
-                ><b-icon icon="star"></b-icon>
+                4.5 <b-icon icon="star"></b-icon>
               </div>
             </div>
           </div>
@@ -639,7 +558,7 @@ export default {
 .main-slider-text .category {
   color: #969696;
   font-size: 0.8rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .main-slider-text .category a {
