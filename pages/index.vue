@@ -8,7 +8,7 @@
           <span class="text-note"> Movie </span>
         </h1>
         <div class="typing-text">
-          Safe, secure, reliable ticketing.Your ticket to live entertainment!
+           Safe, secure, reliable ticketing.Your ticket to live entertainment!
         </div>
       </div>
     </banner>
@@ -37,20 +37,18 @@
                 <span class="quality">Full HD</span>
                 <div class="bottom-text">
                   <div class="category-rating">
-                      <div class="category">
-                        <a href="#">Horror</a>,<a href="#">Mistery</a>,<a
-                          href="#"
-                          >Thriller</a
-                        >
-                      </div>
-                      <div class="rating">
-                        <span>Rating:</span> <b-icon icon="star"></b-icon
-                        ><b-icon icon="star"></b-icon
-                        ><b-icon icon="star"></b-icon
-                        ><b-icon icon="star"></b-icon
-                        ><b-icon icon="star"></b-icon>
-                      </div>
+                    <div class="category">
+                      <a href="#">Horror</a>,<a href="#">Mistery</a>,<a href="#"
+                        >Thriller</a
+                      >
                     </div>
+                    <div class="rating">
+                      <span>Rating:</span> <b-icon icon="star"></b-icon
+                      ><b-icon icon="star"></b-icon><b-icon icon="star"></b-icon
+                      ><b-icon icon="star"></b-icon
+                      ><b-icon icon="star"></b-icon>
+                    </div>
+                  </div>
                   <div class="movie-name">
                     <a class="title" href="#"
                       >Paranormal ACtivity: The Marked Ones</a
@@ -60,178 +58,20 @@
                 </div>
               </div>
             </div>
-            <div class="post-box">
+            <div class="post-box" v-for="item in movies" :key="item.id">
               <div class="post-img">
-                <img src="../assets/imgs/venus.jpg" alt="img" />
+                <img :src="item.image" alt="img" />
               </div>
               <div class="main-slider-text">
                 <span class="quality">Full HD</span>
                 <div class="bottom-text">
                   <div class="movie-name">
-                    <span>2014</span>
-                    <a href="#">Paranormal ACtivity: The Marked Ones</a>
+                    <span>{{ item.movieDuration }}</span>
+                    <a href="#">{{ item.name }}</a>
                   </div>
                   <div class="category-rating">
                     <div class="category">
-                      <a href="#">Horror</a>,<a href="#">Mistery</a>,<a href="#"
-                        >Thriller</a
-                      >
-                    </div>
-                    <div class="rating">
-                      <b-icon icon="star"></b-icon><b-icon icon="star"></b-icon
-                      ><b-icon icon="star"></b-icon><b-icon icon="star"></b-icon
-                      ><b-icon icon="star"></b-icon>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="post-box">
-              <div class="post-img">
-                <img src="../assets/imgs/venus.jpg" alt="img" />
-              </div>
-              <div class="main-slider-text">
-                <span class="quality">Full HD</span>
-                <div class="bottom-text">
-                  <div class="movie-name">
-                    <span>2014</span>
-                    <a href="#">Paranormal ACtivity: The Marked Ones</a>
-                  </div>
-                  <div class="category-rating">
-                    <div class="category">
-                      <a href="#">Horror</a>,<a href="#">Mistery</a>,<a href="#"
-                        >Thriller</a
-                      >
-                    </div>
-                    <div class="rating">
-                      <b-icon icon="star"></b-icon><b-icon icon="star"></b-icon
-                      ><b-icon icon="star"></b-icon><b-icon icon="star"></b-icon
-                      ><b-icon icon="star"></b-icon>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="post-box">
-              <div class="post-img">
-                <img src="../assets/imgs/venus.jpg" alt="img" />
-              </div>
-              <div class="main-slider-text">
-                <span class="quality">Full HD</span>
-                <div class="bottom-text">
-                  <div class="movie-name">
-                    <span>2014</span>
-                    <a href="#">Paranormal ACtivity: The Marked Ones</a>
-                  </div>
-                  <div class="category-rating">
-                    <div class="category">
-                      <a href="#">Horror</a>,<a href="#">Mistery</a>,<a href="#"
-                        >Thriller</a
-                      >
-                    </div>
-                    <div class="rating">
-                      <b-icon icon="star"></b-icon><b-icon icon="star"></b-icon
-                      ><b-icon icon="star"></b-icon><b-icon icon="star"></b-icon
-                      ><b-icon icon="star"></b-icon>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="post-box">
-              <div class="post-img">
-                <img src="../assets/imgs/venus.jpg" alt="img" />
-              </div>
-              <div class="main-slider-text">
-                <span class="quality">Full HD</span>
-                <div class="bottom-text">
-                  <div class="movie-name">
-                    <span>2014</span>
-                    <a href="#">Paranormal ACtivity: The Marked Ones</a>
-                  </div>
-                  <div class="category-rating">
-                    <div class="category">
-                      <a href="#">Horror</a>,<a href="#">Mistery</a>,<a href="#"
-                        >Thriller</a
-                      >
-                    </div>
-                    <div class="rating">
-                      <b-icon icon="star"></b-icon><b-icon icon="star"></b-icon
-                      ><b-icon icon="star"></b-icon><b-icon icon="star"></b-icon
-                      ><b-icon icon="star"></b-icon>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="post-box">
-              <div class="post-img">
-                <img src="../assets/imgs/venus.jpg" alt="img" />
-              </div>
-              <div class="main-slider-text">
-                <span class="quality">Full HD</span>
-                <div class="bottom-text">
-                  <div class="movie-name">
-                    <span>2014</span>
-                    <a href="#">Paranormal ACtivity: The Marked Ones</a>
-                  </div>
-                  <div class="category-rating">
-                    <div class="category">
-                      <a href="#">Horror</a>,<a href="#">Mistery</a>,<a href="#"
-                        >Thriller</a
-                      >
-                    </div>
-                    <div class="rating">
-                      <b-icon icon="star"></b-icon><b-icon icon="star"></b-icon
-                      ><b-icon icon="star"></b-icon><b-icon icon="star"></b-icon
-                      ><b-icon icon="star"></b-icon>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="post-box">
-              <div class="post-img">
-                <img src="../assets/imgs/venus.jpg" alt="img" />
-              </div>
-              <div class="main-slider-text">
-                <span class="quality">Full HD</span>
-                <div class="bottom-text">
-                  <div class="movie-name">
-                    <span>2014</span>
-                    <a href="#">Paranormal ACtivity: The Marked Ones</a>
-                  </div>
-                  <div class="category-rating">
-                    <div class="category">
-                      <a href="#">Horror</a>,<a href="#">Mistery</a>,<a href="#"
-                        >Thriller</a
-                      >
-                    </div>
-                    <div class="rating">
-                      <b-icon icon="star"></b-icon><b-icon icon="star"></b-icon
-                      ><b-icon icon="star"></b-icon><b-icon icon="star"></b-icon
-                      ><b-icon icon="star"></b-icon>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="post-box">
-              <div class="post-img">
-                <img src="../assets/imgs/venus.jpg" alt="img" />
-              </div>
-              <div class="main-slider-text">
-                <span class="quality">Full HD</span>
-                <div class="bottom-text">
-                  <div class="movie-name">
-                    <span>2014</span>
-                    <a href="#">Paranormal ACtivity: The Marked Ones</a>
-                  </div>
-                  <div class="category-rating">
-                    <div class="category">
-                      <a href="#">Horror</a>,<a href="#">Mistery</a>,<a href="#"
-                        >Thriller</a
-                      >
+                      <a href="#">{{ item.category }}</a>
                     </div>
                     <div class="rating">
                       <b-icon icon="star"></b-icon><b-icon icon="star"></b-icon
@@ -260,7 +100,24 @@ export default {
     return {
       bgr: "banner01.jpg",
       bgrSearchTab: "ticket-bg01.jpg",
+      movies: [],
     };
+  },
+  created() {
+    console.log(this.movies)
+    this.getData();
+  },
+  methods: {
+    getData() {
+      this.$axios
+        .get(this.$api.MOVIE_GET)
+        .then((res) => {
+          return this.movies = res.data;
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    },
   },
 };
 </script>
@@ -327,8 +184,8 @@ export default {
 }
 
 .post-point .rating {
-    font-size: 1rem;
-    letter-spacing: 1px;
+  font-size: 1rem;
+  letter-spacing: 1px;
 }
 
 .post-point .main-slider-text .movie-name .title {

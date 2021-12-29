@@ -1,6 +1,6 @@
 <template>
   <swiper ref="mySwiper" :options="swiperOptions">
-    <swiper-slide>
+    <swiper-slide v-for="item in movies" :key="item.id">
       <div class="main-slider-box">
         <a href="" class="main-slider-overlay">
           <!-- <b-icon icon="play-fill" scale="3"></b-icon> -->
@@ -44,358 +44,21 @@
           </svg>
         </a>
         <div class="main-slider-img">
-          <img src="../assets/imgs/venus.jpg" alt="img" />
+          <img :src="item.image" alt="img" />
         </div>
         <div class="main-slider-text">
           <span class="quality">Full HD</span>
           <div class="bottom-text">
             <div class="movie-name">
-              <span>2014</span>
-              <strong>Paranormal ACtivity: The Marked Ones</strong>
+              <span>{{item.movieDuration}}</span>
+              <strong>{{item.name}}</strong>
             </div>
             <div class="category-rating">
               <div class="category">
-                <a href="#">Horror</a>,<a href="#">Mistery</a>,<a href="#"
-                  >Thriller</a
-                >
+                <a href="#">{{item.category}}</a>
               </div>
               <div class="rating">
-                4.5 <b-icon icon="star"></b-icon>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </swiper-slide>
-    <swiper-slide>
-      <div class="main-slider-box">
-        <a href="" class="main-slider-overlay">
-          <!-- <b-icon icon="play-fill" scale="3"></b-icon> -->
-          <svg
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-            x="0px"
-            y="0px"
-            width="80px"
-            height="80px"
-            viewBox="0 0 213.7 213.7"
-            enable-background="new 0 0 213.7 213.7"
-            xml:space="preserve"
-          >
-            <polygon
-              class="triangle"
-              id="XMLID_18_"
-              fill="none"
-              stroke-width="7"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-miterlimit="10"
-              points="
-	73.5,62.5 148.5,105.8 73.5,149.1 "
-            />
-
-            <circle
-              class="circle"
-              id="XMLID_17_"
-              fill="none"
-              stroke-width="7"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-miterlimit="10"
-              cx="106.8"
-              cy="106.8"
-              r="103.3"
-            />
-          </svg>
-        </a>
-        <div class="main-slider-img">
-          <img src="../assets/imgs/venus.jpg" alt="img" />
-        </div>
-        <div class="main-slider-text">
-          <span class="quality">Full HD</span>
-          <div class="bottom-text">
-            <div class="movie-name">
-              <span>2014</span>
-              <strong>Paranormal ACtivity: The Marked Ones</strong>
-            </div>
-            <div class="category-rating">
-              <div class="category">
-                <a href="#">Horror</a>,<a href="#">Mistery</a>,<a href="#"
-                  >Thriller</a
-                >
-              </div>
-              <div class="rating">
-                4.5 <b-icon icon="star"></b-icon>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </swiper-slide>
-    <swiper-slide>
-      <div class="main-slider-box">
-        <a href="" class="main-slider-overlay">
-          <!-- <b-icon icon="play-fill" scale="3"></b-icon> -->
-          <svg
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-            x="0px"
-            y="0px"
-            width="80px"
-            height="80px"
-            viewBox="0 0 213.7 213.7"
-            enable-background="new 0 0 213.7 213.7"
-            xml:space="preserve"
-          >
-            <polygon
-              class="triangle"
-              id="XMLID_18_"
-              fill="none"
-              stroke-width="7"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-miterlimit="10"
-              points="
-	73.5,62.5 148.5,105.8 73.5,149.1 "
-            />
-
-            <circle
-              class="circle"
-              id="XMLID_17_"
-              fill="none"
-              stroke-width="7"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-miterlimit="10"
-              cx="106.8"
-              cy="106.8"
-              r="103.3"
-            />
-          </svg>
-        </a>
-        <div class="main-slider-img">
-          <img src="../assets/imgs/venus.jpg" alt="img" />
-        </div>
-        <div class="main-slider-text">
-          <span class="quality">Full HD</span>
-          <div class="bottom-text">
-            <div class="movie-name">
-              <span>2014</span>
-              <strong>Paranormal ACtivity: The Marked Ones</strong>
-            </div>
-            <div class="category-rating">
-              <div class="category">
-                <a href="#">Horror</a>,<a href="#">Mistery</a>,<a href="#"
-                  >Thriller</a
-                >
-              </div>
-              <div class="rating">
-                4.5 <b-icon icon="star"></b-icon>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </swiper-slide>
-    <swiper-slide>
-      <div class="main-slider-box">
-        <a href="" class="main-slider-overlay">
-          <!-- <b-icon icon="play-fill" scale="3"></b-icon> -->
-          <svg
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-            x="0px"
-            y="0px"
-            width="80px"
-            height="80px"
-            viewBox="0 0 213.7 213.7"
-            enable-background="new 0 0 213.7 213.7"
-            xml:space="preserve"
-          >
-            <polygon
-              class="triangle"
-              id="XMLID_18_"
-              fill="none"
-              stroke-width="7"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-miterlimit="10"
-              points="
-	73.5,62.5 148.5,105.8 73.5,149.1 "
-            />
-
-            <circle
-              class="circle"
-              id="XMLID_17_"
-              fill="none"
-              stroke-width="7"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-miterlimit="10"
-              cx="106.8"
-              cy="106.8"
-              r="103.3"
-            />
-          </svg>
-        </a>
-        <div class="main-slider-img">
-          <img src="../assets/imgs/venus.jpg" alt="img" />
-        </div>
-        <div class="main-slider-text">
-          <span class="quality">Full HD</span>
-          <div class="bottom-text">
-            <div class="movie-name">
-              <span>2014</span>
-              <strong>Paranormal ACtivity: The Marked Ones</strong>
-            </div>
-            <div class="category-rating">
-              <div class="category">
-                <a href="#">Horror</a>,<a href="#">Mistery</a>,<a href="#"
-                  >Thriller</a
-                >
-              </div>
-              <div class="rating">
-                4.5 <b-icon icon="star"></b-icon>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </swiper-slide>
-    <swiper-slide>
-      <div class="main-slider-box">
-        <a href="" class="main-slider-overlay">
-          <!-- <b-icon icon="play-fill" scale="3"></b-icon> -->
-          <svg
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-            x="0px"
-            y="0px"
-            width="80px"
-            height="80px"
-            viewBox="0 0 213.7 213.7"
-            enable-background="new 0 0 213.7 213.7"
-            xml:space="preserve"
-          >
-            <polygon
-              class="triangle"
-              id="XMLID_18_"
-              fill="none"
-              stroke-width="7"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-miterlimit="10"
-              points="
-	73.5,62.5 148.5,105.8 73.5,149.1 "
-            />
-
-            <circle
-              class="circle"
-              id="XMLID_17_"
-              fill="none"
-              stroke-width="7"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-miterlimit="10"
-              cx="106.8"
-              cy="106.8"
-              r="103.3"
-            />
-          </svg>
-        </a>
-        <div class="main-slider-img">
-          <img src="../assets/imgs/venus.jpg" alt="img" />
-        </div>
-        <div class="main-slider-text">
-          <span class="quality">Full HD</span>
-          <div class="bottom-text">
-            <div class="movie-name">
-              <span>2014</span>
-              <strong>Paranormal ACtivity: The Marked Ones</strong>
-            </div>
-            <div class="category-rating">
-              <div class="category">
-                <a href="#">Horror</a>,<a href="#">Mistery</a>,<a href="#"
-                  >Thriller</a
-                >
-              </div>
-              <div class="rating">
-                4.5 <b-icon icon="star"></b-icon>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </swiper-slide>
-    <swiper-slide>
-      <div class="main-slider-box">
-        <a href="" class="main-slider-overlay">
-          <!-- <b-icon icon="play-fill" scale="3"></b-icon> -->
-          <svg
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-            x="0px"
-            y="0px"
-            width="80px"
-            height="80px"
-            viewBox="0 0 213.7 213.7"
-            enable-background="new 0 0 213.7 213.7"
-            xml:space="preserve"
-          >
-            <polygon
-              class="triangle"
-              id="XMLID_18_"
-              fill="none"
-              stroke-width="7"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-miterlimit="10"
-              points="
-	73.5,62.5 148.5,105.8 73.5,149.1 "
-            />
-
-            <circle
-              class="circle"
-              id="XMLID_17_"
-              fill="none"
-              stroke-width="7"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-miterlimit="10"
-              cx="106.8"
-              cy="106.8"
-              r="103.3"
-            />
-          </svg>
-        </a>
-        <div class="main-slider-img">
-          <img src="../assets/imgs/venus.jpg" alt="img" />
-        </div>
-        <div class="main-slider-text">
-          <span class="quality">Full HD</span>
-          <div class="bottom-text">
-            <div class="movie-name">
-              <span>2014</span>
-              <strong>Paranormal ACtivity: The Marked Ones</strong>
-            </div>
-            <div class="category-rating">
-              <div class="category">
-                <a href="#">Horror</a>,<a href="#">Mistery</a>,<a href="#"
-                  >Thriller</a
-                >
-              </div>
-              <div class="rating">
-                4.5 <b-icon icon="star"></b-icon>
+                {{item.rate}} <b-icon icon="star"></b-icon>
               </div>
             </div>
           </div>
@@ -434,6 +97,7 @@ export default {
           disableOnInteraction: false,
         },
       },
+      movies: []
     };
   },
   computed: {
@@ -441,10 +105,25 @@ export default {
       return this.$refs.mySwiper.$swiper;
     },
   },
+  created(){
+    this.getData()
+  },
   mounted() {
     console.log("Current Swiper instance object", this.swiper);
     this.swiper.slideTo(3, 1000, true);
   },
+  methods: {
+    getData() {
+      this.$axios
+        .get(this.$api.MOVIE_GET)
+        .then((res) => {
+          return this.movies = res.data;
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    },
+  }
 };
 </script>
 <style>
